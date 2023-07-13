@@ -1,0 +1,49 @@
+label.btn {
+  margin: 0;
+}
+
+.btn-arrow-top {
+  border: 1px solid transparent;
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  border-radius: 4px;
+  color: var(--light);
+  background-color: var(--warning);
+  position: relative;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.btn-arrow-top {
+  padding-right: 36px;
+}
+.btn-arrow-top:before { /* make two squares (before and after), looking similar to the button */
+  content:"";
+  position: absolute;
+  top: 5px; /* move it down because of rounded corners */
+  width: 22px; /* same as height */
+  height: 22px; /* button_outer_height / sqrt(2) */
+  background: inherit; /* use parent background */
+  border: inherit; /* use parent border */
+  border-left-color: transparent; /* hide left border */
+  border-bottom-color: transparent; /* hide bottom border */
+  border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px */
+  -webkit-border-radius: 0px 4px 0px 0px;
+  -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-top:before{
+  transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+}
+.btn-arrow-top:before { /* align the "before" square to the top */
+  top: -11px;
+}
+.btn-arrow-top:before { /* bring arrow pointers to front */
+  z-index: 1;
+}
+.btn-arrow-top:after { /* hide arrow tails background */
+    /*background-color: white;*/
+}

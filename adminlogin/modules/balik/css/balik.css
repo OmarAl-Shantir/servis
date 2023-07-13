@@ -1,0 +1,138 @@
+:root {
+  --page-width: 210mm !important;
+  --page-height: 297mm !important;
+  --page-padding: 2cm !important;
+}
+
+body{
+  margin: 0 !important;
+  background: #ddd !important;
+  font-size: 12px !important;
+  font-family: sans-serif !important;
+}
+
+h2{
+  text-align: center !important;
+}
+
+.content{
+  background: #fff !important;
+  width: var(--page-width) !important;
+  height: var(--page-height) !important;
+  margin: 0.5cm auto !important;
+  padding: var(--page-padding) !important;
+  position: relative !important;
+}
+
+.contact{
+  text-align: right !important;
+  line-height: 0.3em !important;
+  padding: 1em 0 !important;
+}
+
+.body td:first-child{
+  width: 4cm !important;
+}
+
+table.osobna_karta{
+  border-collapse: collapse !important;
+}
+
+.inventory{
+  width: 100% !important;
+  display: table !important;
+}
+
+.inventory th:nth-child(1){
+  width: 25% !important;
+}
+.inventory th:nth-child(2){
+  width: 20% !important;
+}
+.inventory th:nth-child(3){
+  width: 25% !important;
+}
+.inventory th:nth-child(4){
+  width: 15% !important;
+}
+.inventory th:nth-child(5){
+  width: 15% !important;
+}
+.inventory td{
+  position: relative !important;
+  font-size: 1em !important;
+  text-align: center !important;
+  padding: 0.3em !important;
+}
+
+.footer{
+  width: calc(var(--page-width) - 2 * var(--page-padding)) !important;
+  display: table !important;
+  position: absolute !important;
+  bottom: var(--page-padding) !important;
+}
+
+.footer p{
+  text-align: justify !important;
+}
+
+.footer table{
+  width: 100% !important;
+}
+
+.footer tr:nth-child(1){
+  height: 15mm !important;
+}
+
+.footer td:nth-child(1), .footer td:nth-child(3){
+  width: 40% !important;
+}
+
+.footer td.line{
+  border-top: dotted 1px #333 !important;
+  vertical-align: top !important;
+  text-align: center !important;
+}
+
+.page{
+  position: absolute !important;
+  bottom: 1.5cm !important;
+  right: var(--page-padding) !important;
+}
+
+tr.strike td:before {
+    content: " " !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    border-bottom: 2px solid #000 !important;
+    width: 100% !important;
+}
+
+.content > table{
+  width: 100% !important;
+}
+
+#print_button{
+  position: fixed;
+  left: 1em;
+  top: 1em;
+  width: 7em;
+  z-index: 999;
+}
+
+@page{
+  size: A4 !important;
+}
+
+@media print {
+  #print_button{
+    display: none !important;
+  }
+  .content {
+    margin: 0 !important;
+    padding: var(--page-padding) !important;
+    width: var(--page-width) !important;
+    height: calc(var(--page-height)) !important;
+  }
+}

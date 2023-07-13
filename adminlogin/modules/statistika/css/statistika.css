@@ -1,0 +1,33 @@
+th.rotate {
+  /* Something you can count on */
+  height: 240px;
+  white-space: nowrap;
+}
+
+th.rotate > div {
+  transform:
+    translate(0, 0)
+    rotate(270deg);
+  width: 0;
+}
+th.rotate > div > span {
+  padding: 5px 10px;
+}
+
+@media print {
+  @page {
+    size: 1488px 2105px;
+  }
+  #accordionSidebar, .topbar, div#type, #selector {
+    display: none !important;
+  }
+  p.info {
+    font-size: 1.3em !important;
+  }
+  div.info {
+    display: block !important;
+  }
+  #content-wrapper{
+    background-color: #fff !important;
+  }
+}

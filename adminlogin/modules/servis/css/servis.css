@@ -1,0 +1,70 @@
+#paste_cislo_prepravy:invalid + #message::before {
+  content: 'Číslo prepravy musí začínať "70...."';
+  color: red;
+}
+
+input[type="file"] {
+    display: none;
+    margin: 0;
+}
+
+label.btn {
+  margin: 0;
+}
+
+rect.status_activep{
+  fill: #c0c0c0;
+}
+
+rect.status_active{
+  fill: #4db93b;
+}
+
+rect.status_normal{
+  fill: #ffffff;
+}
+
+button.status{
+  width: 120px;
+  height: 60px;
+  background: transparent;
+  border: none;
+}
+
+tr.inactive{
+  background: #DDD;
+}
+
+tr.deleted{
+  background: #fd7b7b;
+}
+
+.nav-link.active{
+  color: #ffffff !important;
+  background-color: #198754!important;
+}
+
+.btn-outline-secondary:checked{
+  background-color: #4db93b !important;
+  border-color: #4db93b !important;
+}
+
+ul.nav-tabs{
+  border-bottom: none!important;
+}
+
+.nav-tabs .nav-link{
+  border-bottom: solid 1px #ddd !important;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-bottom: none !important;
+}
+
+.nav-link{
+  transition: none !important;
+}
+
+.page-item{
+  margin: 0 3px;
+}
